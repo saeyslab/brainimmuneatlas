@@ -9,8 +9,8 @@ Here you can find the scripts used to analyse all the data:
 
 + script_bulkRNAseq.R = script to analyse bulk RNA-seq data
 + script_scRNAseq.R = consensus script to analyse single cell RNA-seq data
-+ script_scRNAseq_choroidPlexusWtK11.R = script to analyse the WT choroid plexus sample. Here we did a correction for dissocation
-+ script_scenic.R = consesus script to run __[SCENIC](https://github.com/aertslab/SCENIC)__ on single cell RNA-seq data
++ script_scRNAseq_choroidPlexusWtK11.R = script to analyse the WT choroid plexus sample. Here we did a correction for dissociation
++ script_scenic.R = consensus script to run __[SCENIC](https://github.com/aertslab/SCENIC)__ on single cell RNA-seq data
 + script_scorpius_durWt_K22.R = trajectory analysis of the WT dura sample using __[SCORPIUS](https://github.com/rcannood/SCORPIUS)__
 
 ### Webtool

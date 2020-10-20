@@ -37,11 +37,11 @@ getwd()
 ########################################
 
 ##### Load raw counts exp1
-countDataKia1<-read.table(file="/srv/data/RNAseqSamples/exp1/outputHTSeqCount/all_counts.txt",sep="\t", header=TRUE, 
+countDataKia1<-read.table(file="data_bulkRNAseq/all_counts_exp1.txt",sep="\t", header=TRUE, 
                       stringsAsFactors=FALSE)
 
 ##### Load raw counts exp2
-countDataKia2<-read.table(file="/srv/data/RNAseqSamples/exp2/outputHTSeqCount/all_counts.txt",sep="\t", header=TRUE, 
+countDataKia2<-read.table(file="data_bulkRNAseq/all_counts_exp2.txt",sep="\t", header=TRUE, 
                           stringsAsFactors=FALSE)
 
 ### Only NMG and NCPM needed
@@ -54,7 +54,7 @@ colsNMG3<-grep('NMG_S3',colnames(countDataKia2))
 countDataKia2<-countDataKia2[,- colsNMG3]
 
 ##### Load raw counts of GSE117081
-countDataCharlie<-read.table(file="/srv/data/RNAseqSamples/GSE117081/outputHTSeqCount/all_counts.txt",sep="\t", header=TRUE, 
+countDataCharlie<-read.table(file="data_bulkRNAseq/all_counts_GSE117081.txt",sep="\t", header=TRUE, 
                           stringsAsFactors=FALSE)
 
 ### Only AMF Cre- and KC Cre- needed (and only 4 replicates of each)
@@ -97,7 +97,7 @@ colnames(countData)<-newColnames
 ########################################
 
 ### Load meta data
-colData<-read.table(file="documentation/metadata.txt",sep="\t", header=TRUE, stringsAsFactors=TRUE)
+colData<-read.table(file="data_bulkRNAseq/metadata.txt",sep="\t", header=TRUE, stringsAsFactors=TRUE)
 rownames(colData)<-colData$fileName
 colData<-colData[,-1]
 ##remove the bad samples here as well
